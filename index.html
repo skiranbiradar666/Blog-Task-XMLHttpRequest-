@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xhr Request 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+            crossorigin="anonymous">
+
+
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form id="postForm" class="mb-5 p-3 bg-white rounded-sm">
+                    <div class="form-group">
+                        <label for="title">Post Title</label>
+                        <input type="text" id="title" class="form-control">
+                    </div>
+                     <div class="form-group">
+                        <label for="content">Post Content</label>
+                        <textarea type="text" id="content" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="userId">User_Id</label>
+                        <select id="userId" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <button
+                     id="addPost"
+                     type="submit"
+                     class="btn btn-sm btn-outline-info btn-block">Add Post</button>
+                    <button 
+                     id="updatePost"
+                     type="button"
+                     class="btn btn-sm btn-outline-info d-none btn-block">Update Post</button>
+                </form>
+                <div id="postContainer" class="d-flex flex-column-reverse">
+                <div class="card mb-3 shadow rounded">
+                    <div class="card-header">
+                        <h3 class="m-0">Title</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="m-0">
+                            Include every Bootstrap JavaScript plugin with one of our two bundles. 
+                            Both bootstrap.bundle.js and bootstrap.bundle.min.js include Popper for our tooltips and popovers,
+                             but not jQuery. Include jQuery first, then a Bootstrap JavaScript bundle. 
+                             For more information about what’s included in Bootstrap, please see our contents section.
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-primary">Edit</button>
+                        <button class="btn btn-sm btn-outline-danger">Remove</button>                
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loader d-none" id="loader">
+        <div class="spinner-border text-primary" role="status">
+
+        </div>
+        <p>Loading...</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
